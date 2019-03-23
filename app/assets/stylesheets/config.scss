@@ -1,0 +1,59 @@
+// size
+$breakpoint-tablet: 980px;
+$breakpoint-mobile: 640px;
+
+// color
+$white: #FFFFFF;
+$grey: #F2F2F2;
+$orange: #F2994A;
+$light-orange: #F8AF6F;
+$black: #000000;
+
+// mixin
+// PC
+@mixin max-screen($break-point: $breakpoint-tablet) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+// tablet
+@mixin screen($break-point-min: $breakpoint-mobile, $break-point-max: $breakpoint-tablet) {
+  @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+    @content;
+  }
+}
+
+// smart phone
+@mixin min-screen($break-point: $breakpoint-mobile) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+// button
+@mixin button($background-color: $light-orange){
+  background-color: $background-color;
+  border-radius: 50px;
+  padding: 20px 40px;
+  color: #FFFFFF;
+}
+
+// O MA JI NA I
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 40px;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 500;
+  margin: 20px;
+}
+h2 {
+  font-size: 50px;
+  font-weight: 200;
+  margin: 10px;
+}
