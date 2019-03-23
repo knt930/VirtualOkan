@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+食材を入れるとレシピを答えてくれるアプリ
 
-Things you may want to cover:
 
-* Ruby version
+* Rubyバージョン
+2.5.1
 
-* System dependencies
+* レポジトリのクローン
+```
+git clone git@github.com:knt930/Zubora.git
+```
 
-* Configuration
+* データベースの作成
+```
+bundle exec rake db:create
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
