@@ -9,16 +9,17 @@
     </div>
   </div>
   <div class="contents">
-    <div class="tile">
-      <%= image_tag("cho.svg", :alt => "超ズボラ", :class=>"cho-icon") %>
-      <%= image_tag("nikujaga.svg", :alt => "肉じゃがの画像") %>
-      <p>にくじゃが</p>
-    </div>
-    <div class="tile">
-      <%= image_tag("cho.svg", :alt => "超ズボラ", :class=>"cho-icon") %>
-      <%= image_tag("nikujaga.svg", :alt => "肉じゃがの画像") %>
-      <p>にくじゃが</p>
-    </div>
+    <% @recipes.each do |recipe| %>
+      <%= link_to recipe_path(recipe) do %>
+        <div class="tile">
+          <% if recipe.status == "cho_zubora" %>
+            <%= image_tag("cho.svg", :alt => "超ズボラ", :class=>"cho-icon") %>
+          <% end %>
+          <%= image_tag("#{recipe.image}", :alt => "肉じゃがの画像") %>
+          <p><%= recipe.name %></p>
+        </div>
+      <% end %>
+    <% end %>
     <div class="do-not-select">
       <p>ズボラ過ぎて</p>
       <p>選べない</p>

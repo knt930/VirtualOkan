@@ -54,3 +54,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'seed-fu'
 gem 'ransack'
+gem 'pry-rails'
+gem 'pry-byebug'
+gem 'pry-doc'
