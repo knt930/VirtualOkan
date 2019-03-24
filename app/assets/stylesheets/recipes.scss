@@ -15,13 +15,13 @@
       background-image: url("../assets/top_content.svg");
       margin: 0 20px;
       border: 5px solid $orange;
-
+      border-radius: $tile-radius;
       .top-title-contents {
         position: relative;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
         padding: 3px;
-        border-radius: $tile-radius;
+        border-radius: $tile-radius - 5px;
 
         img {
           position: absolute;
