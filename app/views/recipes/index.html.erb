@@ -1,2 +1,27 @@
-<h1>3分で作れる<br>ズボラ飯レシピ</h1>
-<%= link_to  'ズボラ検索する', search_path %>
+<section id="top">
+  <div class="top-title-img">
+    <div class="top-title-contents">
+      <h1>3分で作れる<br>ズボラ飯レシピ</h1>
+      <div>
+        <%= link_to  'ズボラ検索する', search_path ,:class => "search-button"%>
+        <%= image_tag("search.svg", :alt=>"検索") %>
+      </div>
+    </div>
+  </div>
+  <div class="contents">
+    <div class="tile">
+      <%= image_tag("cho.svg", :alt => "超ズボラ", :class=>"cho-icon") %>
+      <%= image_tag("nikujaga.svg", :alt => "肉じゃがの画像") %>
+      <p>にくじゃが</p>
+    </div>
+    <div class="tile">
+      <%= image_tag("cho.svg", :alt => "超ズボラ", :class=>"cho-icon") %>
+      <%= image_tag("nikujaga.svg", :alt => "肉じゃがの画像") %>
+      <p>にくじゃが</p>
+    </div>
+    <div class="do-not-select">
+      <p>ズボラ過ぎて</p>
+      <p>選べない</p>
+    </div>
+  </div>
+</section>

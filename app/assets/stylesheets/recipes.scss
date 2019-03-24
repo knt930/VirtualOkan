@@ -4,8 +4,99 @@
 
 @import "config";
 
+@mixin tile-title (){
+
+}
+
 // スマホ
 @include min-screen() {
+  #top {
+    .top-title-img {
+      background-image: url("../assets/top_content.svg");
+      margin: 0 20px;
+      border: 5px solid $orange;
+
+      .top-title-contents {
+        position: relative;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 3px;
+        border-radius: $tile-radius;
+
+        img {
+          position: absolute;
+          right: 50px;
+          bottom: 46px;
+        }
+
+        h1 {
+          font-weight: bold;
+          text-align: left;
+          color: $white;
+        }
+
+        .search-button {
+          letter-spacing: 4px;
+          font-size: 20px;
+          font-weight: bolder;
+          display: block;
+          @include button($orange);
+          width: 60%;
+          margin: 20px auto;
+        }
+      }
+    }
+    .contents{
+      margin: 20px 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      .cho-icon{
+        position:absolute;
+      }
+      .tile {
+        margin: 5px;
+        width: 150px;
+        height: 200px;
+        background-color: $white;
+        border-radius: $tile-radius;
+        box-shadow: 0 5px 10px 5px $grey;
+        img{
+          max-width: 100%;
+          border-radius: 10px 10px 0 0;
+        }
+        p{
+          padding: 3px;
+        }
+      }
+      .do-not-select{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        width: 150px;
+        height: 200px;
+        color: $white;
+        background-color: $orange;
+        border-radius: $tile-radius;
+        box-shadow: 0 5px 10px 5px $grey;
+        > p {
+          font-weight: bold;
+          font-size: 20px;
+        }
+        :after {
+          position: absolute;
+          height: 95%;
+          width: 95%;
+          background-color:$white;
+        }
+      }
+    }
+  }
+
   #recipes-index {
     text-align: center;
     margin: 0 30px;
