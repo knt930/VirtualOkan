@@ -5,11 +5,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+    <%= image_tag("logo.svg", :alt => "Zubora logo", :class => "logo") %>
     <%= yield %>
   </body>
 </html>
