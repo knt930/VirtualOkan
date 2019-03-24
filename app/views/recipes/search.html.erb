@@ -1,2 +1,37 @@
-<h1>レシピを決めよう</h1>
+<main>
+  <h1>レシピを決めよう</h1>
+  <section>
+    <h2>今ある食材</h2>
+    <button onclick="modalOpen()">
+      <div id="selectedFood"></div>
+    </button>
+  </section>
+  <section>
+    <h2>ジャンル</h2>
+    <div class="genre">
+      <button id="zubora" onclick="onZubora()">ズボラ飯</button>
+      <div>
+        <button id="superZubora" onclick="onSuperZubora()">超ズボラ飯</button>
+        <div>食材３つ以下</div>
+      </div>
+    </div>
+  </section>
+  <button class="main_button" onclick="search()">検索する</button>
+</main>
 
+<div id="modal">
+  <section>
+    <h2>食材を選ぶ</h2>
+    <div class="foodSelector">
+      <button onclick="selectFood(this)" id="トマト"><div class="badge"></div><img src="/assets/tomato.png" alt="ピーマン"></button>
+      <button onclick="selectFood(this)" id="ピーマン"><div class="badge"></div><img src="/assets/greenpepper.png" alt="ピーマン"></button>
+      <button onclick="selectFood(this)" id="牛肉"><div class="badge"></div><img src="/assets/beef.png" alt="牛肉"></button>
+    </div>
+    <div class="foodSelector">
+      <button onclick="selectFood(this)" id="たまねぎ"><div class="badge"></div><img src="/assets/onion.png" alt="たまねぎ"></button>
+      <button onclick="selectFood(this)" id="にんじん"><div class="badge"></div><img src="/assets/carrots.png" alt="にんじん"></button>
+      <button onclick="selectFood(this)" id="たまご"><div class="badge"></div><img src="/assets/egg.png" alt="たまご"></button>
+    </div>
+  </section>
+  <button class="main_button" onclick="decideFood()">OK</button>
+</div>
