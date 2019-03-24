@@ -1,2 +1,24 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<h1><%= @recipe.name %></h1>
+  <div class="ingredients">
+    <h2>食材(1人前)</h2>
+      <div class="ingredients_list">
+        <% @recipe.ingredients.each do |ingredient| %>
+          <div class="ingredient">
+            <div class="ingredient_name">
+              <span class="name"><%= ingredient.name %></span>
+            </div>
+            <div class="ingredient_quantity">
+              <%= ingredient.quantity %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+  </div>
+  <div class="recipes">
+    <h2>レシピ</h2>
+    <% @recipe.instructions.each do |instruction| %>
+      <div class="recipe">
+        <p><%= "#{instruction.sort_order}. #{instruction.body}" %></p>
+      </div>
+    <% end %>
+  </div>
