@@ -1,24 +1,23 @@
-<h1><%= @recipe.name %></h1>
-  <div class="ingredients">
-    <h2>食材(1人前)</h2>
-      <div class="ingredients_list">
-        <% @recipe.ingredients.each do |ingredient| %>
-          <div class="ingredient">
-            <div class="ingredient_name">
-              <span class="name"><%= ingredient.name %></span>
-            </div>
-            <div class="ingredient_quantity">
-              <%= ingredient.quantity %>
-            </div>
-          </div>
-        <% end %>
-      </div>
-  </div>
-  <div class="recipes">
-    <h2>レシピ</h2>
-    <% @recipe.instructions.each do |instruction| %>
-      <div class="recipe">
-        <p><%= "#{instruction.sort_order}. #{instruction.body}" %></p>
-      </div>
+<article id="recipes-index">
+  <%= image_tag(@recipe.image, alt: "recipe_img")%>
+  <h1><%= @recipe.name %></h1>
+  <section class="source">
+    <h2 class="source-title">食材（1人分）</h2>
+    <% @recipe.ingredients.each do |ingredient| %>
+      <ul>
+        <li>
+          <span class="name"><%= ingredient.name %></span>
+          <span class="amount"><%= ingredient.quantity %></span>
+        </li>
+      </ul>
     <% end %>
-  </div>
+  </section>
+  <section class="recipes">
+    <h2 class="recipes-title">レシピ</h2>
+    <% @recipe.instructions.each do |instruction| %>
+      <ul>
+        <li><%= "#{instruction.sort_order}. #{instruction.body}" %></li>
+      </ul>
+    <% end %>
+  </section>
+</article>
