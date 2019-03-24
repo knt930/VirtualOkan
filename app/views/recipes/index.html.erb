@@ -8,6 +8,17 @@
       </div>
     </div>
   </div>
+  <section class="change-search-top">
+    <%= image_tag("cho.svg", :alt => "超ズボラ", :class=>"cho-icon") %>
+    <div>
+      <p class="top-tag">
+        <span>たまねぎ</span>
+        <span>にんじん</span>
+        <span>牛肉</span>
+      </p>
+      <button onClick="returnPage()">条件を変更する</button>
+    </div>
+  </section>
   <div class="contents">
     <div class="tile">
       <%= image_tag("cho.svg", :alt => "超ズボラ", :class=>"cho-icon") %>
@@ -25,3 +36,10 @@
     </div>
   </div>
 </section>
+<script type="text/javascript" charset="utf-8">
+  function returnPage() {
+      var url = location.href()
+      window.open(url.replace('search_result', 'search'));
+  }
+
+</script>
